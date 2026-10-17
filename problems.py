@@ -1,6 +1,6 @@
 # Beginner
 # 1. Print "Hello, World!".
-print("Hello, World!")
+# print("Hello, World!")
 
 # 2. Take two numbers as input and print their sum.
 # firstNum = int(input("Enter first Numner:"))
@@ -82,7 +82,7 @@ print("Hello, World!")
 #         self.nums = nums
 
 #     def calculate(self):
-#         if self.nums == 0 or self.nums < 0:
+#         if self.nums < 0:
 #             print("enter a valid positive number")
 #             return
 
@@ -173,27 +173,137 @@ print("Hello, World!")
 # result.rotate()
 
 # 10. Count the number of vowels in a string.
-text = "hello world"
+# text = "HeLLo world"
 
 
-class FindVowels:
+# class FindVowels:
 
-    def __init__(self, texts):
-        self.texts = texts
+#     def __init__(self, texts):
+#         self.texts = texts
 
-    def calculate_vowels(self):
-        for i in range(len(self.texts)):
-            print(self.texts[i])
+#     def calculate_vowels(self):
+#         count = 0
+#         for i in range(len(self.texts)):
+#             text = self.texts[i].casefold()
+#             if text == "a" or text == "e" or text == "i" or text == "o" or text == "u":
+#                 count += 1
+#         print(count)
 
 
-result = FindVowels(text)
-result.calculate_vowels()
+# result = FindVowels(text)
+# result.calculate_vowels()
 
 
 # Intermediate
 # 11. Find the largest number in a list without using max().
+
+# num = [-9, 0, -1, 2, 3, 5, 6, 4, 7, 8, 9]
+
+
+# class MaxNumbers:
+
+#     def __init__(self, nums):
+#         self.nums = nums
+
+#     def calculate(self):
+#         ans = self.nums[0]
+#         for i in range(len(self.nums)):
+#             if self.nums[i] > ans:
+#                 ans = self.nums[i]
+
+#         print(ans)
+
+
+# result = MaxNumbers(num)
+# result.calculate()
+
 # 12. Remove duplicate elements from a list.
+
+# num = [-9, 0, -1, 2, 3, 5, 2, 5, 6, 4, 7, 8, 9]
+
+
+# class RemoveDuplicate:
+
+#     def __init__(self, nums):
+#         self.nums = nums
+
+#     def calculate(self):
+#         ansList = []
+#         for num in self.nums:
+#             if num not in ansList:
+#                 ansList.append(num)
+#         print(ansList)
+
+
+# result = RemoveDuplicate(num)
+# result.calculate()
+
 # 13. Check whether a string is a palindrome.
+
+text = "Madam"
+
+
+class CheckPalindrome:
+
+    def __init__(self, texts):
+        self.texts = texts
+
+    def calculate_word(self):
+
+        main_text = self.texts
+        texts = [char.lower() for char in main_text if char.isalnum()]
+        cleaned_texts = "".join(texts)
+        left = 0
+        right = len(cleaned_texts) - 1
+        print(texts)
+        for i in range(len(cleaned_texts)):
+            left_text = cleaned_texts[left]
+            right_text = cleaned_texts[right]
+            if left_text != right_text:
+                print(False)
+                return
+            left += 1
+            right -= 1
+
+        print(True)
+
+
+result = CheckPalindrome(text)
+result.calculate_word()
+
 # 14. Convert a list of digits into a single integer.
+
+# num = [2, 3, 5, 6]
+
+
+# class ConvertList:
+
+#     def __init__(self, nums):
+#         self.nums = nums
+
+#     def calculateList(self):
+#         sum = ""
+#         for i in self.nums:
+#             sum += str(i)
+#         print(int(sum))
+
+
+# result = ConvertList(num)
+# result.calculateList()
 # Example: [1, 2, 3, 4] → 1234
+
 # 15. Create a Student class with __init__() and a method that prints the student's name and age.
+
+
+# class Student:
+
+#     def __init__(self, name: str, age: int):
+#         self.name = name
+#         self.age = age
+
+#     def stduents_details(self):
+#         print(f"The student's name is {self.name} and student's age is {self.age}")
+
+
+# result = Student("Jashim", 17)
+# result.stduents_details()
