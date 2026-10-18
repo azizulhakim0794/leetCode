@@ -240,36 +240,36 @@
 
 # 13. Check whether a string is a palindrome.
 
-text = "Madam"
+# text = "Madam"
 
 
-class CheckPalindrome:
+# class CheckPalindrome:
 
-    def __init__(self, texts):
-        self.texts = texts
+#     def __init__(self, texts):
+#         self.texts = texts
 
-    def calculate_word(self):
+#     def calculate_word(self):
 
-        main_text = self.texts
-        texts = [char.lower() for char in main_text if char.isalnum()]
-        cleaned_texts = "".join(texts)
-        left = 0
-        right = len(cleaned_texts) - 1
-        print(texts)
-        for i in range(len(cleaned_texts)):
-            left_text = cleaned_texts[left]
-            right_text = cleaned_texts[right]
-            if left_text != right_text:
-                print(False)
-                return
-            left += 1
-            right -= 1
+#         main_text = self.texts
+#         texts = [char.lower() for char in main_text if char.isalnum()]
+#         cleaned_texts = "".join(texts)
+#         left = 0
+#         right = len(cleaned_texts) - 1
+#         print(texts)
+#         for i in range(len(cleaned_texts)):
+#             left_text = cleaned_texts[left]
+#             right_text = cleaned_texts[right]
+#             if left_text != right_text:
+#                 print(False)
+#                 return
+#             left += 1
+#             right -= 1
 
-        print(True)
+#         print(True)
 
 
-result = CheckPalindrome(text)
-result.calculate_word()
+# result = CheckPalindrome(text)
+# result.calculate_word()
 
 # 14. Convert a list of digits into a single integer.
 
@@ -307,3 +307,8 @@ result.calculate_word()
 
 # result = Student("Jashim", 17)
 # result.stduents_details()
+
+# main_text = "A man, a plan, a canal: Panama"
+
+
+# print(cleaned_texts)
