@@ -1,7 +1,7 @@
 # python 504_Base_7.py
 
 
-num = -7
+num = 160
 
 isNagative = False
 
