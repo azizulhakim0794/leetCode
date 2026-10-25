@@ -1,7 +1,7 @@
 # python 504_Base_7.py
 
 
-num = 160
+num = 101
 
 isNagative = False
 
@@ -9,7 +9,7 @@ if num < 0:
     num = abs(num)
     isNagative = True
 
-base = 7
+base = 10
 result = ""
 
 if num == 0:

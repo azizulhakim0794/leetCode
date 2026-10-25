@@ -10,9 +10,6 @@ class ListNode:
 li1 = [2, 4, 3]
 li2 = [5, 6, 4]
 
-# li1 = [2, 4, 3]
-# li2 = [5, 6, 4]
-
 head1 = ListNode(li1[0])
 
 current1 = head1
@@ -43,15 +40,11 @@ def reverse_linked_list(head):
     return prev
 
 
-def sum(head1):
-    current1 = head1
-    # current2 = head2
+head = reverse_linked_list(head1)
+print(head)
 
-    for i in current1:
-        print(current1.val)
-        current1 = current1.next
+current = head
 
-
-head1 = reverse_linked_list(head1)
-
-sum(head1)
+while current:
+    print(current.val)
+    current = current.next
