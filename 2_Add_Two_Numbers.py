@@ -7,8 +7,8 @@ class ListNode:
         self.next = next
 
 
-li1 = [2, 4, 3]
-li2 = [5, 6, 4]
+li1 = [5, 6]
+li2 = [5, 4, 9]
 
 head1 = ListNode(li1[0])
 
@@ -28,23 +28,32 @@ for value in li2[1:]:
 
 
 def reverse_linked_list(head):
-    prev = None
     curr = head
+    num = ""
 
     while curr:
-        temp = curr.next
-        curr.next = prev
-        prev = curr
-        curr = temp
+        num += str(curr.val)
+        curr = curr.next
 
-    return prev
+    return int(num[::-1])
 
 
-head = reverse_linked_list(head1)
-print(head)
+num1 = reverse_linked_list(head1)
+num2 = reverse_linked_list(head2)
 
-current = head
+total = num1 + num2
 
-while current:
-    print(current.val)
-    current = current.next
+result = str(total)[::-1]
+
+sum_head = ListNode(int(result[0]))
+curr3 = sum_head
+
+for value in result[1:]:
+    curr3.next = ListNode(int(value))
+    curr3 = curr3.next
+
+curr3 = sum_head
+
+while curr3:
+    print(curr3.val)
+    curr3 = curr3.next
