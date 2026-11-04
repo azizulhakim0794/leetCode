@@ -8,42 +8,69 @@ n = 19
 # 12 + 02 + 02 = 1
 
 
-def happy(num):
-    if num < 9:
-        return num
-    sum = 0
+# def happy_num(num):
+#     nums = []
+#     sum = 0
 
-    while num > 0:
-        d = num % 10
-        sum += d**2
-        num = num / 10
-    return happy(sum)
+#     if num <= 4:
+#         return num
+
+#     for i in str(num):
+#         nums.append(int(i))
+
+#     for num in nums:
+#         sum += num * num
+
+#     if sum <= 3:
+#         return sum
+
+#     return happy_num(sum)
 
 
-def happy_num(num):
-    nums = []
-    sum = 0
+# print(happy_num(5))
+
+
+# def happy_num(num, memo={}):
+#     nums = []
+#     sum = 0
+
+#     if num in memo:
+#         return memo[num]
+
+#     if num <= 4:
+#         return num
+
+#     for i in str(num):
+#         nums.append(int(i))
+
+#     for num in nums:
+#         sum += num * num
+
+#     if sum <= 3:
+#         return sum
+
+#     memo[num] = happy_num(sum, memo)
+
+#     return memo[num]
+
+
+def happy_num(num, memo={}):
+    if num in memo:
+        return memo[num]
 
     if num <= 4:
         return num
 
-    for i in str(num):
-        nums.append(int(i))
+    total = 0
 
-    for num in nums:
-        sum += num * num
+    for digit in str(num):
+        total += int(digit) * int(digit)
 
-    if sum <= 3:
-        return sum
+    memo[num] = happy_num(total, memo)
 
-    return happy_num(sum)
+    print(memo)
+
+    return memo[num]
 
 
-print(happy(5))
-
-# if happy_num(n) > 1 :
-#     return False
-# else :
-#     return True
-
-# print(happy_num(4))
+print(happy_num(5))

@@ -17,21 +17,21 @@ print(fibonacci(6))
 # print(memo[1])
 
 
-# def fibonacci(n, memo={}):
-#     if n <= 1:
-#         return n
+def fibonacci(n, memo={}):
+    if n <= 1:
+        return n
 
-#     if n in memo:
-#         return memo[n]
+    if n in memo:
+        return memo[n]
 
-#     first = fibonacci(n - 1, memo)
-#     second = fibonacci(n - 2, memo)
+    first = fibonacci(n - 1, memo)
+    second = fibonacci(n - 2, memo)
 
-#     memo[n] = first + second
+    memo[n] = first + second
 
-#     print(memo[n], first, second)
+    print(memo)
 
-#     return memo[n]
+    return memo[n]
 
 
-# print(fibonacci(6))
+print(fibonacci(4))
