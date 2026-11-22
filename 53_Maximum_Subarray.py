@@ -10,13 +10,13 @@ sub_arry = []
 
 total = nums[0]
 
-# for i in range(len(nums)):
-#     for j in range(len(nums)):
-#         if len(nums[i:j+1]) > 0:
-#             sum_arr = sum(nums[i:j+1])
-#             sub_arry.append(nums[i:j+1])
-#             if total < sum_arr:
-#                 total = sum_arr
+for i in range(len(nums)):
+    for j in range(len(nums)):
+        if len(nums[i:j+1]) > 0:
+            sum_arr = sum(nums[i:j+1])
+            sub_arry.append(nums[i:j+1])
+            if total < sum_arr:
+                total = sum_arr
 
 def get_subarrays(nums, start=0, end=1):
     if start == len(nums):
