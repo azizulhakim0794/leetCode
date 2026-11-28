@@ -1,4 +1,4 @@
-# python 832_Flipping_an_Image.py
+# python3 832_Flipping_an_Image.py
 image = [[1, 1, 0, 0], [1, 0, 0, 1], [0, 1, 1, 1], [1, 0, 1, 0]]
 
 # Output: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]
